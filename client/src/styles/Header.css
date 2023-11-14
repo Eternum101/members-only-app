@@ -1,0 +1,68 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    background-color: #313131;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+}
+
+nav h1 span {
+    color: #6500FF;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right button {
+    padding: 5px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color 150ms ease-in-out;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+
+.btn-log-in:hover, .btn-member:hover {
+    border: 2px solid #6500FF;
+    border-radius: 5px;
+    color: #6500FF;
+}
+
+.btn-sign-up:hover, .btn-message:hover {
+    border: 2px solid #EEFF00;
+    border-radius: 5px;
+    color: #EEFF00;
+}
+
+.btn-sign-up, .btn-log-in, .btn-message, .btn-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-sign-up svg, .btn-log-in svg, .btn-message svg, .btn-member svg {
+    font-size: 0.9rem;
+}
+
+.btn-message span {
+    color: #EEFF00;
+}
+
+.btn-member span {
+    color: #6500FF;
+}

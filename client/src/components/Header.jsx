@@ -39,10 +39,14 @@ function Header({ user }) {
                                 <FaPlus/>
                                 New <span>Message</span> 
                             </button> 
-                            <button className="btn-member">
-                                <FaUserPlus/>
-                                Become A<span>Member</span> 
-                            </button>
+                            {user && user.membershipStatus !== 'Member' ? (
+                            <Link to='/member'>
+                                <button className="btn-member">
+                                    <FaUserPlus/>
+                                    Become A<span>Member</span> 
+                                </button>
+                            </Link>
+                        ) : null}
                             <button className="btn-log-in" onClick={handleLogout}>
                                 <FaArrowRightFromBracket/>
                                 Log Out

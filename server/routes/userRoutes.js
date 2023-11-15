@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const router = express.Router();
-const { createUser } = require('../controllers/userController');
+const { createUser, updateUserMembership } = require('../controllers/userController');
 
 router.post('/', createUser);
 router.post('/login', passport.authenticate('local'), (req, res) => {
@@ -16,6 +16,7 @@ router.get('/logout', (req, res) => {
     res.json({ message: 'Logged out successfully' });
   });
 });
+router.post('/member', updateUserMembership);
 
 
 module.exports = router;

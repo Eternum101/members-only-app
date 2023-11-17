@@ -40,14 +40,18 @@ exports.createUser = (req, res) => {
 };
 
 exports.updateUserMembership = async (req, res, next) => {
-    const { passcode } = req.body;
+    const { passcode, adminPasscode } = req.body;
+    const user = req.user;
 
     if (passcode === 'member101') {
-        const user = req.user;
         user.membershipStatus = 'Member';
         await user.save();
         res.json({ user, message: 'Membership status upgraded successfully' });
-    } else {UserSchema
+    } else if (adminPasscode === 'admin111') {
+        user.membershipStatus = 'Admin';
+        await user.save();
+        res.json({ user, message: 'Admin status granted successfully' });
+    } else {
         res.status(400).json({ message: 'Incorrect passcode' });
     }
 };

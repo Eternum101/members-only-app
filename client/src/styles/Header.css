@@ -48,14 +48,20 @@ nav h1 span {
     color: #EEFF00;
 }
 
-.btn-sign-up, .btn-log-in, .btn-message, .btn-member {
+.btn-admin:hover {
+    border: 2px solid #00e768;
+    border-radius: 5px;
+    color: #00e768;
+}
+
+.btn-sign-up, .btn-log-in, .btn-message, .btn-member, .btn-admin {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 }
 
-.btn-sign-up svg, .btn-log-in svg, .btn-message svg, .btn-member svg {
+.btn-sign-up svg, .btn-log-in svg, .btn-message svg, .btn-member svg, .btn-admin svg {
     font-size: 0.9rem;
 }
 

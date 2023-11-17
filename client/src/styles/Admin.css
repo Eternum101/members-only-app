@@ -1,25 +1,29 @@
-.message-headings {
+.admin-headings {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.message-h1 {
-    margin-bottom: 30px !important; 
+.admin-headings h3 {
+    font-size: 1rem;
 }
 
-.message-input-full-width:hover, .message-input-full-width:focus {
-    border: solid 2px #eeff00;
+.admin-spacing {
+    margin-bottom: 30px; 
+}
+
+.admin-input-full-width:hover, .admin-input-full-width:focus {
+    border: solid 2px #00e768;
     outline: none;
 }
   
-.message-input-full-width {
+.admin-input-full-width {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.message-textarea {
+.admin-textarea {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -32,13 +36,8 @@
     border: solid 2px #535353;
     transition: all 150ms ease-in-out;
 }
-
-.message-textarea:hover{
-    border: solid 2px #eeff00;
-    outline: none;
-}
   
-.message-submit-button {
+.admin-submit-button {
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -47,13 +46,13 @@
     font-size: 1.1rem;
     font-weight: 700;
     border: none;
-    background-color: #eeff00;
-    color: #000000;
+    background-color: #00e768;
+    color: #fff;
     cursor: pointer;
     transition: all 100ms ease-in-out;
 }
 
-.message-submit-button:hover {
+.admin-submit-button:hover {
     transform: translateY(-2px);
-    background-color: #eeff00;
+    background-color: #00ff73;
 }

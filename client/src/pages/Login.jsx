@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import '../styles/Login.css';
+import '../styles/Form.css';
 import axios from 'axios';
 import UserContext from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
@@ -31,7 +32,7 @@ function Login() {
     
     return (
         <div className="form-container">
-            <h1>Log In</h1>
+            <h1 className='form-header'>Log In</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Email</label>

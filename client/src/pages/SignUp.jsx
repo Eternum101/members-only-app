@@ -1,13 +1,14 @@
 import React from 'react';
-import '../styles/SignUp.css';
 import useSignUp from '../hooks/useSignUp';
+import '../styles/SignUp.css';
+import '../styles/Form.css';
 
 function SignUp() {
     const { inputs, handleInputChange, handleSubmit } = useSignUp();
 
     return (
         <div className="form-container">
-            <h1>Let's Get Started</h1>
+            <h1 className='form-header'>Let's Get Started</h1>
             <form onSubmit={handleSubmit}>
                 <div className="label-input-wrapper">
                     <div>

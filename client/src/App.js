@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Member from './pages/Member';
 import Message from './pages/Message';
+import Admin from './pages/Admin';
 import UserContext from './context/UserContext';
 
 function App() {
@@ -35,6 +36,10 @@ function App() {
           <Route
             path='/message'
             element={<Message/>}
+          />
+          <Route
+            path='/admin'
+            element={<Admin/>}
           />
         </Routes>
       </Router>

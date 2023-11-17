@@ -1,0 +1,96 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    padding: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
+}
+
+.message-headings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message-h1 {
+    margin-bottom: 30px !important; 
+}
+
+.label-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+  
+.label-input-wrapper div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+input {
+    background-color: transparent;
+    border: solid 2px #535353;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+}
+
+.message-input-full-width:hover, .member-input-full-width:focus {
+    border: solid 2px #eeff00;
+    outline: none;
+}
+  
+.message-input-full-width {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.message-textarea {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 1.5rem;
+    border: solid 2px #535353;
+    transition: all 150ms ease-in-out;
+}
+
+.message-textarea:hover{
+    border: solid 2px #eeff00;
+    outline: none;
+}
+  
+.message-submit-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    background-color: #eeff00;
+    color: #000000;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.message-submit-button:hover {
+    transform: translateY(-2px);
+    background-color: #eeff00;
+}

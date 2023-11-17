@@ -35,10 +35,14 @@ function Header({ user }) {
                             <h4>
                                 {user.firstName}
                             </h4>
-                            <button className="btn-message">
-                                <FaPlus/>
-                                New <span>Message</span> 
-                            </button> 
+                            {user && user.membershipStatus === 'Member' ? (
+                            <Link to='/message'>
+                                <button className="btn-message">
+                                    <FaPlus/>
+                                    New <span>Message</span> 
+                                </button> 
+                            </Link>
+                            ) : null}
                             {user && user.membershipStatus !== 'Member' ? (
                             <Link to='/member'>
                                 <button className="btn-member">

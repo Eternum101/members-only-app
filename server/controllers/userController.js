@@ -39,7 +39,6 @@ exports.createUser = (req, res) => {
         });
 };
 
-
 exports.updateUserMembership = async (req, res, next) => {
     const { passcode } = req.body;
 
@@ -48,7 +47,7 @@ exports.updateUserMembership = async (req, res, next) => {
         user.membershipStatus = 'Member';
         await user.save();
         res.json({ user, message: 'Membership status upgraded successfully' });
-    } else {
+    } else {UserSchema
         res.status(400).json({ message: 'Incorrect passcode' });
     }
 };

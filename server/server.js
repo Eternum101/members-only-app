@@ -62,8 +62,10 @@ passport.deserializeUser(async (id, done) => {
 });
 
 const userRoutes = require('./routes/userRoutes');
+const messageRoutes = require('./routes/messageRoutes');
 
 app.use('/api/users', userRoutes);
+app.use('/api/message', messageRoutes);
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`)

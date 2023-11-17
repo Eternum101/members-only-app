@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Member from './pages/Member';
+import Message from './pages/Message';
 import UserContext from './context/UserContext';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Router>
         <Header user={user}/>
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Home user={user}/>} />
           <Route
             path='/sign-up'
             element={<SignUp/>}
@@ -30,6 +31,10 @@ function App() {
           <Route
             path='/member'
             element={<Member/>}
+          />
+          <Route
+            path='/message'
+            element={<Message/>}
           />
         </Routes>
       </Router>

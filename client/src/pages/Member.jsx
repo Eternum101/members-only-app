@@ -21,7 +21,7 @@ function Member() {
             setUser(user);
             navigate('/');
         } catch (error) {
-            if (error.response && error.response.status === 401) {
+            if (error.response && error.response.status === 400) {
                 setError('Incorrect passcode. Please try again.'); // Update the error message
             } else {
                 console.error(error);
@@ -30,11 +30,13 @@ function Member() {
     };
 
     return (
+    <div className="form-wrapper">
+         <div className="content-container">
         <div className="form-container">
             <div className='member-headings'>
                 <h1>Become a Member</h1>
                 <h3>Enter the Correct Passcord to Acquire Member Status</h3>
-                <h3>Look for a Hint.</h3>
+                <h3>(Look for a Hint.)</h3>
             </div>
         <form onSubmit={handleSubmit}>
         <div>
@@ -46,9 +48,15 @@ function Member() {
                     onChange={(e) => setPasscode(e.target.value)} 
                 />
                 </div>
+            {error && <div className='error-log-in'>{error}</div>}
             <button className="member-submit-button" type="submit"><span>Submit </span></button>
         </form>
     </div>
+    <div className='hidden-passcode'>
+        <h3>Passcode: member101</h3>
+    </div>
+    </div>
+</div>
     )
 }
 

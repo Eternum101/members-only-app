@@ -1,8 +1,11 @@
 .member-headings {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .member-headings h1 {
@@ -42,4 +45,15 @@
 .member-submit-button:hover {
     transform: translateY(-2px);
     background-color: #7a22ff;
+}
+
+.hidden-passcode {
+    padding: 15px;
+    color: transparent;
+    transition: all 150ms ease-in-out;
+    width: 260px;
+}
+
+.hidden-passcode:hover {
+    color: inherit;
 }

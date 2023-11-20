@@ -22,6 +22,7 @@ function Message() {
     };
 
     return (
+    <div className="form-wrapper">
         <div className="form-container">
             <div className='message-headings'>
                 <h1 className='message-h1'>New Message</h1>
@@ -45,6 +46,7 @@ function Message() {
             <button className="message-submit-button" type="submit"><span>Submit </span></button>
         </form>
     </div>
+</div>
     )
 }
 

@@ -8,6 +8,7 @@ import UserContext from '../context/UserContext';
 function Admin() {
     const [adminPasscode, setAdminPasscode] = useState('');
     const { user, setUser } = useContext(UserContext);
+    const [error, setError] = useState('');
 
     const navigate = useNavigate();
 
@@ -20,10 +21,12 @@ function Admin() {
             navigate('/');
         } catch (error) {
             console.error(error);
+            setError('Incorrect password. Please try again.'); // Add this line
         }
     };
 
     return (
+    <div className="form-wrapper">
         <div className="form-container">
             <div className='admin-headings'>
                 <h1>Admin Privileges</h1>
@@ -35,13 +38,16 @@ function Admin() {
                 <input 
                     className='admin-input-full-width' 
                     type="password"
+                    required
                     value={adminPasscode}
                     onChange={(e) => setAdminPasscode(e.target.value)}
                 />
                 </div>
+                {error && <div className='error-log-in'>{error}</div>}
             <button className="admin-submit-button" type="submit"><span>Submit </span></button>
         </form>
     </div>
+</div>
     )
 }
 

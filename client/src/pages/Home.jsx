@@ -2,16 +2,22 @@ import React, { useEffect, useState } from "react";
 import '../styles/Home.css'
 import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
+import { FaTrashCan } from "react-icons/fa6";
 
 function Home({ user }) {
     const [message, setMessage] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     console.log(user);
 
     useEffect(() => {
         const fetchMessages = async () => {
+            setIsLoading(true);
             try {
                 const response = await axios.get('/api/message');
-                setMessage(response.data);
+                setTimeout(() => {
+                    setMessage(response.data);
+                    setIsLoading(false);
+                }, 1000);
             } catch (error) {
                 console.error(error);
             }
@@ -19,6 +25,15 @@ function Home({ user }) {
 
         fetchMessages();
     }, []);
+
+    const deleteMessage = async(id) => {
+        try {
+            await axios.delete(`/api/message/${id}`);
+            setMessage(message.filter((msg) => msg._id !== id));
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     return (
     <>
@@ -29,7 +44,10 @@ function Home({ user }) {
         )}
     </div>
     <div className="main-container">
-        {message.map((message, index) => (
+    {isLoading ? (
+            <div className="loader"></div>
+        ) : (
+        message.map((message, index) => (
     <div key={index} className="messages-container">
         <div className="title-container">
             <h3>{message.title}</h3>
@@ -43,7 +61,16 @@ function Home({ user }) {
         <p>by {message.author.firstName}</p>
         ) : null}
         <p>{message.text}</p>
+    <div className="delete-container">
+    { user && user.membershipStatus === 'Admin' ? (
+            <button className="btn-delete" onClick={() => deleteMessage(message._id)}>
+                <FaTrashCan/>
+                Delete
+                </button>
+        ) : null}
     </div>
+    </div>
+    )
 ))}
     </div>
     </>

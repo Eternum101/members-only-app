@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
+require('dotenv').config();
 
 exports.createUser = (req, res) => {
     const { firstName, lastName, email, password } = req.body;
@@ -43,11 +44,11 @@ exports.updateUserMembership = async (req, res, next) => {
     const { passcode, adminPasscode } = req.body;
     const user = req.user;
 
-    if (passcode === 'member101') {
+    if (passcode === process.env.MEMBER_PASSCODE) {
         user.membershipStatus = 'Member';
         await user.save();
         res.json({ user, message: 'Membership status upgraded successfully' });
-    } else if (adminPasscode === 'admin111') {
+    } else if (adminPasscode === process.env.ADMIN_PASSCODE) {
         user.membershipStatus = 'Admin';
         await user.save();
         res.json({ user, message: 'Admin status granted successfully' });

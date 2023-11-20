@@ -7,6 +7,7 @@ function SignUp() {
     const { inputs, handleInputChange, handleSubmit } = useSignUp();
 
     return (
+    <div className="form-wrapper">
         <div className="form-container">
             <h1 className='form-header'>Let's Get Started</h1>
             <form onSubmit={handleSubmit}>
@@ -37,6 +38,7 @@ function SignUp() {
                 <button className="submit-button" type="submit"><span>Sign Up </span></button>
             </form>
         </div>
+    </div>
     );
 }
 

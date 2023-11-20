@@ -1,7 +1,10 @@
 .admin-headings {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
+    text-align: center;
 }
 
 .admin-headings h3 {

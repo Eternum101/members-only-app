@@ -30,6 +30,9 @@
 }
 
 .error-log-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.9rem;
     font-weight: 700;
     color: #e20000;

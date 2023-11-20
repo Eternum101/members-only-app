@@ -23,7 +23,7 @@ function Login() {
             navigate('/');
         } catch (error) {
             if (error.response && error.response.status === 401) {
-                setError('Incorrect email or password. Please try again.'); // Update the error message
+                setError('Incorrect email or password. Please try again.');
             } else {
                 console.error(error);
             }
@@ -31,6 +31,7 @@ function Login() {
     };
     
     return (
+    <div className="form-wrapper">
         <div className="form-container">
             <h1 className='form-header'>Log In</h1>
             <form onSubmit={handleSubmit}>
@@ -52,10 +53,11 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                {error && <div className='error-log-in'>{error}</div>} {/* Add this line */}
+                {error && <div className='error-log-in'>{error}</div>}
                 <button className="log-in-submit-button" type="submit"><span>Continue </span></button>
             </form>
         </div>
+    </div>
     );
 }
 

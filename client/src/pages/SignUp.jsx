@@ -4,7 +4,7 @@ import '../styles/SignUp.css';
 import '../styles/Form.css';
 
 function SignUp() {
-    const { inputs, handleInputChange, handleSubmit } = useSignUp();
+    const { inputs, handleInputChange, handleSubmit, error } = useSignUp();
 
     return (
     <div className="form-wrapper">
@@ -35,6 +35,7 @@ function SignUp() {
                         <input type="password" name="confirmPassword" onChange={handleInputChange} value={inputs.confirmPassword} required />
                     </div>
                 </div>
+                {error && <div className='error-log-in'>{error}</div>}
                 <button className="submit-button" type="submit"><span>Sign Up </span></button>
             </form>
         </div>

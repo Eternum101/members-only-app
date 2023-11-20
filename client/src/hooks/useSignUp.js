@@ -13,6 +13,7 @@ const useSignUp = () => {
         confirmPassword: ''
     });
 
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -21,11 +22,11 @@ const useSignUp = () => {
         }
 
         if (!inputs.firstName || !inputs.lastName || !inputs.email || !inputs.password || !inputs.confirmPassword) {
-            return alert('Please enter all fields');
+            return setError('Please enter all fields');
         }
     
         if (inputs.password !== inputs.confirmPassword) {
-            return alert("Passwords don't match");
+            return setError("Passwords don't match. Please try again.");
         }
     
         const response = await fetch('/api/users', {
@@ -57,7 +58,8 @@ const useSignUp = () => {
     return {
         handleSubmit,
         handleInputChange,
-        inputs
+        inputs,
+        error
     };
 };
 

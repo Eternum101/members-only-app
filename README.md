@@ -64,7 +64,7 @@ A Members Only Application which incorporates levels of exclusivity.
 - Members Can Create New Messages
 - Members Can View the Date & Author of Messages
 - Ability to Delete Messages as an Admin
-- Non-Members Can See a List of Messages but the Authors Name and Date is Hidden
+- Non-Members See a List of Messages but the Authors Name and Date is Hidden
 - Responsive User Interface
 
 [Back to Top](#members-only-app)

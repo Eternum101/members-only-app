@@ -13,32 +13,26 @@ A Members Only Application which incorporates levels of exclusivity.
 
 ## Screenshots
 
-### Initial Screen
-![](screenshots/initial-screen-inventory-app.png) 
+### Explore Messages (Non-Member)
+![](screenshots/explore-messages-members-only-app.png) 
 
-### Items Page
-![](screenshots/items-page-inventory-app.png) 
+### Sign Up Form
+![](screenshots/sign-up-members-only-app.png)  
 
-### Add Item
-![](screenshots/add-item-inventory-app.png)
+### Log In Form
+![](screenshots/log-in-members-only-app.png)  
 
-### Individual Items Page
-![](screenshots/individual-item-page-inventory-app.png)
+### Explore Messages (Member)
+![](screenshots/explore-messages-member-members-only-app.png) 
 
-### Update Item
-![](screenshots/update-item-inventory-app.png)
+### New Message
+![](screenshots/new-message-members-only-app.png) 
 
-### Categories Page
-![](screenshots/categories-page-inventory-app.png)
+### Admin Privileges
+![](screenshots/admin-members-only-app.png) 
 
-### Add Category
-![](screenshots/add-category-inventory-app.png)
-
-### Individual Categories Page
-![](screenshots/individual-category-page-inventory-app.png)
-
-### Update Category
-![](screenshots/update-category-inventory-app.png)
+### Explore Messages (Admin)
+![](screenshots/explore-messages-admin-members-only-app.png) 
 
 [Back to Top](#members-only-app)
 

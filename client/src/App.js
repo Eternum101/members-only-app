@@ -10,6 +10,8 @@ import Message from './pages/Message';
 import Admin from './pages/Admin';
 import UserContext from './context/UserContext';
 
+export const URL = process.env.REACT_APP_SERVER_URL;
+
 function App() {
   const [user, setUser] = useState(null);
 

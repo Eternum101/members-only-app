@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
+const cors = require('cors');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 const app = express();
@@ -21,6 +22,10 @@ app.use(session({
     secret: 'members',
     resave: false,
     saveUninitialized: false, 
+}));
+
+app.use(cors({
+  origin: ["http://localhost:3000", ],
 }));
 
 app.use(passport.initialize());

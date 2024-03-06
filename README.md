@@ -14,7 +14,13 @@ A Members Only Application which incorporates levels of exclusivity.
 ## Screenshots
 
 ### Explore Messages (Non-Member)
-![](screenshots/explore-messages-members-only-app.png) 
+![](screenshots/explore-messages-members-only-app.png)
+
+### Explore Messages (Non-Member - Logged In)
+![](screenshots/explore-messages-non-member-logged-in-members-only-app.png)
+
+### Become a Member
+![](screenshots/become-a-member-members-only-app.png)
 
 ### Sign Up Form
 ![](screenshots/sign-up-members-only-app.png)  
@@ -26,7 +32,7 @@ A Members Only Application which incorporates levels of exclusivity.
 ![](screenshots/explore-messages-member-members-only-app.png) 
 
 ### New Message
-![](screenshots/new-message-members-only-app.png) 
+![](screenshots/new-message-members-only-app.png)
 
 ### Admin Privileges
 ![](screenshots/admin-members-only-app.png) 

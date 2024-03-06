@@ -4,6 +4,7 @@ import '../styles/Form.css';
 import axios from 'axios';
 import UserContext from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { URL } from '../App';
 
 function Message() {
     const { user } = useContext(UserContext);
@@ -14,7 +15,7 @@ function Message() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('/api/message', { title, text, author: user._id });
+            await axios.post(`${URL}/api/message`, { title, text, author: user._id });
             navigate('/');
         } catch (error) {
             console.error(error);

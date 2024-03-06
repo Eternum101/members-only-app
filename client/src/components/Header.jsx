@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios"; 
 import UserContext from '../context/UserContext';
 import { useNavigate } from "react-router-dom";
+import { URL } from '../App';
 
 function Header({ user }) {
 
@@ -13,7 +14,7 @@ function Header({ user }) {
 
     const handleLogout = async () => {
         try {
-            await axios.get('/api/users/logout');
+            await axios.get(`${URL}/api/users/logout`);
             setUser(null);
             navigate('/');
         } catch (error) {

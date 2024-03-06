@@ -3,6 +3,7 @@ import '../styles/Home.css'
 import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
 import { FaTrashCan } from "react-icons/fa6";
+import { URL } from "../App";
 
 function Home({ user }) {
     const [message, setMessage] = useState([]);
@@ -13,7 +14,7 @@ function Home({ user }) {
         const fetchMessages = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get('/api/message');
+                const response = await axios.get(`${URL}/api/message`);
                 setTimeout(() => {
                     setMessage(response.data);
                     setIsLoading(false);
@@ -28,7 +29,7 @@ function Home({ user }) {
 
     const deleteMessage = async(id) => {
         try {
-            await axios.delete(`/api/message/${id}`);
+            await axios.delete(`${URL}/api/message/${id}`);
             setMessage(message.filter((msg) => msg._id !== id));
         } catch (error) {
             console.error(error);

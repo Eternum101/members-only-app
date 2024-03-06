@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../context/UserContext';
+import { URL } from '../App';
 
 const useSignUp = () => {
     const { setUser } = useContext(UserContext);
@@ -29,7 +30,7 @@ const useSignUp = () => {
             return setError("Passwords don't match. Please try again.");
         }
     
-        const response = await fetch('/api/users', {
+        const response = await fetch(`${URL}/api/users`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

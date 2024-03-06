@@ -25,7 +25,8 @@ app.use(session({
 }));
 
 app.use(cors({
-  origin: ["http://localhost:3000", ],
+  origin: ["http://localhost:3000", 
+  "https://members-only-app-api.onrender.com"],
 }));
 
 app.use(passport.initialize());

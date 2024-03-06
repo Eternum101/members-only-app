@@ -4,6 +4,7 @@ import '../styles/Form.css';
 import axios from 'axios';
 import UserContext from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { URL } from '../App';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ function Login() {
         event.preventDefault();
     
         try {
-            const response = await axios.post('/api/users/login', { email, password });
+            const response = await axios.post(`${URL}/api/users/login`, { email, password });
             const user = response.data;
 
             setUser(user);

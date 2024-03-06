@@ -4,6 +4,7 @@ import '../styles/Form.css';
 import axios from 'axios';
 import UserContext from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { URL } from '../App';
 
 function Member() {
     const { setUser } = useContext(UserContext);
@@ -15,7 +16,7 @@ function Member() {
         event.preventDefault();
     
         try {
-            const response = await axios.post('/api/users/member', { passcode });
+            const response = await axios.post(`${URL}/api/users/member`, { passcode });
             const { user } = response.data;
 
             setUser(user);

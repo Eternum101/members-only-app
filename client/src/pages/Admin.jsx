@@ -4,6 +4,7 @@ import '../styles/Form.css';
 import '../styles/Admin.css'
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../context/UserContext';
+import { URL } from '../App';
 
 function Admin() {
     const [adminPasscode, setAdminPasscode] = useState('');
@@ -16,12 +17,12 @@ function Admin() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('/api/users/member', { adminPasscode });
+            const response = await axios.post(`${URL}/api/users/member`, { adminPasscode });
             setUser(response.data.user);
             navigate('/');
         } catch (error) {
             console.error(error);
-            setError('Incorrect password. Please try again.'); // Add this line
+            setError('Incorrect password. Please try again.');
         }
     };
 

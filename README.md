@@ -1,6 +1,6 @@
 # Members Only App
 
-🔗 [View Demo](https://members-only-app-6gk8.onrender.com)
+🔗 [View Demo](https://members-only-app-6gk8.onrender.com) **(Please Allow Up to 50 Seconds for Website to Load from Cold Start)**
 
 ## Table of Contents
 - [About The Project](#about-the-project)

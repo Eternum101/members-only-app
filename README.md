@@ -61,9 +61,9 @@ A Members Only Application which incorporates levels of exclusivity.
 
 ---
 
-🔏 Passport.js
+🔏 **Passport.js**
 
-🔑 Bcrypt
+🔑 **Bcrypt**
 
 [Back to Top](#members-only-app)
 
